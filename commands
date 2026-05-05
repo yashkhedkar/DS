@@ -1,0 +1,39 @@
+cd ~/Desktop/ds/Assignment\ 1
+javac *.java
+rmiregistry 1099 &
+java Server
+java Client
+
+
+Assignment2 --: 
+idlj -fall CalculatorModule.idl
+javac *.java CalculatorModule/*.java
+orbd -ORBInitialPort 1050
+java CalculatorServer -ORBInitialPort 1050
+java CalculatorClient -ORBInitialPort 1050
+
+
+Assignment 3 --: 
+OpenMP
+gcc -fopenmp sum_openmp.c -o sum_openmp
+./sum_openmp
+
+MPI
+mpicc sum_mpi.c -o sum_mpi
+mpirun -np 4 ./sum_mpi
+
+cd ~/Desktop/ds/Assignment\ 4
+python3 server.py
+python3 client.py
+
+
+cd ~/Desktop/ds/Assignment\ 5
+javac TokenRing.java
+java TokenRing
+
+
+
+cd ~/Desktop/ds/Assignment\ 6
+javac BullyAlgoExample.java RingAlgorithm.java
+java BullyAlgoExample
+java RingAlgorithm
